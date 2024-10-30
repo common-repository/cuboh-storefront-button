@@ -1,0 +1,133 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "cuboh-storefront-button/cuboh-storefront-button",
+  "version": "0.1.0",
+  "title": "Cuboh Storefront Button",
+  "category": "widgets",
+  "icon": "drumstick",
+  "description": "Takes customers directly to your Cuboh storefront.",
+  "attributes": {
+    "url": {
+      "type": "string",
+      "source": "attribute",
+      "selector": "a",
+      "attribute": "href"
+    },
+    "title": {
+      "type": "string",
+      "source": "attribute",
+      "selector": "a",
+      "attribute": "title"
+    },
+    "text": {
+      "type": "string",
+      "source": "html",
+      "selector": "a",
+      "default": "Order Now"
+    },
+    "linkTarget": {
+      "type": "string",
+      "source": "attribute",
+      "selector": "a",
+      "attribute": "target"
+    },
+    "rel": {
+      "type": "string",
+      "source": "attribute",
+      "selector": "a",
+      "attribute": "rel"
+    },
+    "placeholder": {
+      "type": "string"
+    },
+    "backgroundColor": {
+      "type": "string"
+    },
+    "textColor": {
+      "type": "string"
+    },
+    "gradient": {
+      "type": "string"
+    },
+    "width": {
+      "type": "string",
+      "selector": "a"
+    },
+    "isValid": {
+      "type": "boolean",
+      "default": false
+    },
+    "storeID": {
+      "type": "string"
+    },
+    "className": {
+      "type": "string"
+    },
+    "style": {
+      "type": "object",
+      "default": {
+        "color": {
+          "background": "#16173E",
+          "text": "#F0EEED"
+        },
+        "border": {
+          "radius": "3px"
+        }
+      }
+    }
+  },
+  "supports": {
+    "anchor": true,
+    "align": true,
+    "alignWide": false,
+    "html": false,
+    "color": {
+      "__experimentalSkipSerialization": true,
+      "gradients": true,
+      "background": true,
+      "text": true
+    },
+    "typography": {
+      "fontFamily": true,
+      "__experimentalFontFamily": true,
+      "__experimentalTextTransform": true,
+      "__experimentalDefaultControls": {
+        "fontSize": true
+      }
+    },
+    "reusable": false,
+    "spacing": {
+      "margin": true,
+      "__experimentalSkipSerialization": true,
+      "padding": [
+        "horizontal",
+        "vertical"
+      ]
+    },
+    "__experimentalBorder": {
+      "radius": true,
+      "__experimentalSkipSerialization": true
+    },
+    "__experimentalSelector": ".wp-block-button__link",
+    "__experimentalStyle": {
+      "border": {
+        "//": "100% causes an oval, but any explicit but really high value retains the pill shape.",
+        "radius": "9999px"
+      },
+      "spacing": {
+        "padding": {
+          "//": "The extra 2px are added to size solids the same as the outline versions.",
+          "top": "calc(0.667em + 2px)",
+          "right": "calc(1.333em + 2px)",
+          "bottom": "calc(0.667em + 2px)",
+          "left": "calc(1.333em + 2px)"
+        }
+      }
+    }
+  },
+  "textdomain": "cuboh-storefront-button",
+  "editorScript": "file:./index.js",
+  "editorStyle": "wp-block-button-editor file:./index.css",
+  "style": "wp-block-button file:./style.css "
+}
